@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>S. Asmiya — Portfolio</title>
+  <meta name="description" content="Portfolio of S. Asmiya" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#06b6d4;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(180deg,#071021 0%, #071824 100%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:#02101a}
+    .brand h1{font-size:18px;margin:0}
+    .menu{display:flex;gap:18px;align-items:center}
+    .menu a{color:var(--muted);text-decoration:none;font-weight:600}
+    .menu a:hover{color:var(--accent)}
+    .hamburger{display:none;border:0;background:transparent;color:var(--muted);font-size:22px}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;padding:28px 0}
+    .hero .intro h2{margin:0 0 12px;font-size:28px}
+    .hero .intro p{margin:0;color:var(--muted)}
+    .profile-card{background:var(--card);border-radius:var(--radius);padding:20px;border:1px solid rgba(255,255,255,0.03)}
+    .profile-pic{width:100%;height:260px;border-radius:10px;background-image:linear-gradient(135deg,#0b1220,#092033);display:flex;align-items:center;justify-content:center;font-size:36px;color:var(--muted)}
+    .section-title{margin:28px 0 12px;color:var(--muted);font-weight:600}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:1px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:19px}
+    .card .thumb{height:200px;border-radius:8px;background-size:cover;background-position:center}
+    .card h3{margin:0;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .card .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:var(--glass);color:var(--muted)}
+    .card .actions{margin-top:auto;display:flex;gap:10px}
+    .btn{padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted);text-decoration:none;font-weight:600}
+    .btn:focus{outline:2px solid rgba(6,182,212,0.18)}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#7c3aed);color:#02101a;border:none}
+    footer{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+    .socials{display:flex;gap:12px}
+    .socials a{color:var(--muted);text-decoration:none;font-weight:600}
+    @media (max-width:960px){.hero{grid-template-columns:1fr;} .projects{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){.menu{display:none} .hamburger{display:inline} .projects{grid-template-columns:1fr} .hero{gap:16px} .profile-pic{height:200px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="nav" role="banner">
+      <div class="brand">
+        <div class="logo">A</div>
+        <div>
+          <h1 style="margin:0;font-size:16px">S. Asmiya</h1>
+          <div style="font-size:12px;color:var(--muted)">2nd B.Com (C.A) Student</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+        <div class="menu" id="menu">
+          <a href="#projects">Certificates</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="intro">
+          <h2>Hi — I'm S. Asmiya. I build things and learn constantly.</h2>
+          <p>Welcome to my portfolio. Below are some of my details, certificate, and interests.</p>
+          <div style="margin-top:18px;display:flex;gap:10px">
+            <a class="btn primary" href="#projects">View Certificates</a>
+            <a class="btn" href="#contact">My Details</a>
+          </div>
+        </div>
+        <aside class="profile-card" aria-label="Profile card">
+          <div class="profile-pic" style="background-image:url('profile.jpg'); background-size:cover; background-position:top;"></div>
+          <div style="margin-top:12px">
+            <h3 style="margin:0">S. Asmiya</h3>
+            <p style="margin:6px 0 0;color:var(--muted);font-size:14px">Currently studying 2nd B.Com (C.A). I enjoy learning new things and communicate with different people.</p>
+          </div>
+        </aside>
+      </section>
+      <h3 class="section-title" id="projects">AI certificate</h3>
+      <section class="projects" aria-label="Projects">
+<article class="card" tabindex="0">
+  <div class="thumb" style="
+    background-image: url('certificate.jpg');
+    background-size: contain;
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-color: #0b1220;
+    border-radius: 8px;
+  "></div>
+          <h3>Digital Productivity AI</h3>
+          <p>Proficiency in leveraging AI tools and platforms to streamline workflows, enhance digital productivity, and automate complex tasks, significantly reducing project completion times and improving output efficiency. This certificate confirms the ability to use AI responsibly and effectively for task such as data analysis.</p>
+        </article>
+      </section>
+      <section style="margin-top:36px" id="about">
+        <h3 class="section-title">About Me</h3>
+        <p style="color:var(--muted)"><strong>I'm S. Asmiya</strong>, a student at <strong>N.P. Savithramma Government Degree College, Chittoor</strong>. I am pursuing <strong>2nd B.Com (C.A)</strong>, have completed a certificate in <strong>Artificial Intelligence</strong>, and enjoy communication, playing games, and reading books.</p>
+      </section>
+      <section style="margin-top:20px" id="contact">
+        <h3 class="section-title">Education</h3>
+        <p style="color:var(--muted)"><strong>Degree:</strong> 2nd B.Com (C.A)</p>
+        <p style="color:var(--muted)"><strong>College:</strong> N.P. Savithramma Government Degree College, Chittoor</p>
+        <h3 class="section-title" style="margin-top:20px">Skills & Hobbies</h3>
+        <p style="color:var(--muted)">Communication, Reading, Playing Games</p>
+        <h3 class="section-title" style="margin-top:20px">Certificates</h3>
+        <p style="color:var(--muted)">Artificial Intelligence (AI)</p>
+        <h3 class="section-title" style="margin-top:20px">Family Details</h3>
+        <p style="color:var(--muted)"><strong>Mother:</strong> S. Shanaj<br>
+        <strong>Father:</strong> S. Yasin<br>
+        <strong>Sister:</strong> S. Thasmiya</p>
+        <h3 class="section-title" style="margin-top:20px">Contact</h3>
+        <p style="color:var(--muted)">Phone: 6309768530<br>
+        Email: <a href="mailto:asmiyashaik29@gmail.com">asmiyashaik29@gmail.com</a></p>
+      </section>
+    </main>
+    <footer>
+      <div>© <span id="year"></span> S. Asmiya</div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    hamburger && hamburger.addEventListener('click', ()=>{
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
+      if(!expanded){
+        menu.style.display = 'flex';
+        menu.style.flexDirection = 'column';
+        menu.style.position = 'absolute';
+        menu.style.right = '24px';
+        menu.style.top = '64px';
+        menu.style.background = 'rgba(11,18,30,0.9)';
+        menu.style.padding = '12px';
+        menu.style.borderRadius = '10px';
+        menu.style.boxShadow = '0 8px 30px rgba(2,6,23,0.6)';
+      } else {
+        menu.style.display = '';
+        menu.style.flexDirection = '';
+        menu.style.position = '';
+        menu.style.right = '';
+        menu.style.top = '';
+        menu.style.background = '';
+        menu.style.padding = '';
+        menu.style.borderRadius = '';
+        menu.style.boxShadow = '';
+      }
+    });
+    document.addEventListener('click', (e)=>{
+      if(!menu.contains(e.target) && !hamburger.contains(e.target) && window.innerWidth <= 640){
+        menu.style.display = '';
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>
